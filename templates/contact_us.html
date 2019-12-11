@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        {% for contact in contacts %}
+        <div class="card mt-3" >
+            <div class="card-header">
+                    {{ contact.key }}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ contact.value }}</p>
+                    <a href="#" class="btn btn-primary">Contact</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

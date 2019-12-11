@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        {% if service %}
+        <form>
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1">Service</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" readonly value="{{ service.code }}">
+                <small id="emailHelp" class="form-text text-muted">{{ service.name }}</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Ok</button>
+        </form>
+        {% endif %}
+    </div>
+{% endblock %}
